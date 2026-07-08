@@ -1,0 +1,15 @@
+# Private/source materials — never publish
+Presentation Package/
+backup-old-site/
+*.docx
+*.zip
+
+# Local tooling & docs not part of the live site
+optimize_assets.py
+PROJECT_GUIDE.md
+.claude/
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -33,11 +33,12 @@ No environment variables, no backend, nothing to configure.
 
 ```
 Cloudtopia website claude/
-├── index.html              ← the single-page site (v2)
+├── index.html              ← the single-page site (v3)
 ├── css/styles.css          ← all styling (palette via CSS custom properties)
 ├── js/main.js              ← nav, reveals, lightbox, parallax, sundrop hunt, map zoom
 ├── assets/img/             ← optimized web images (WebP) used by the site
-├── backup-old-site/        ← complete copy of the previous version (v1) — open its index.html directly
+├── backup-old-site/        ← complete copy of v1 (local only, not in git) — open its index.html directly
+├── backup-site-v2/         ← complete copy of v2 (local only, not in git)
 ├── Presentation Package/   ← original source art (kept, untouched)
 ├── optimize_assets.py      ← regenerates assets/img from Presentation Package
 ├── PROJECT_GUIDE.md        ← the design/content guide this site was built from
@@ -70,7 +71,7 @@ Originals are never modified — rerun any time.
 
 - **Copy & sections** live directly in `index.html` (clearly commented by section).
 - **Colours, spacing, fonts** are CSS custom properties at the top of
-  `css/styles.css` (`:root { --sky-2: …; --coral: …; }`) — change once, applies everywhere.
+  `css/styles.css` (`:root { --sky: …; --pink: …; --navy: …; }`) — change once, applies everywhere.
 - **Contact email** (`henrik@cloudtopiaentertainment.com`) appears in the
   *Partner with us* button and the footer — a placeholder until the final address is confirmed.
 
@@ -96,6 +97,12 @@ Originals are never modified — rerun any time.
   trail, zoomable world map, character speech bubbles, real mini-game names, roadmap
   path, shooting star, structured data (SEO), image `width/height` for layout stability.
   The previous version is preserved untouched in `backup-old-site/`.
+- **v3 (2026-07-14):** visual redesign to match the Cloudlings app pitch deck —
+  Sniglet ExtraBold bubble headlines, Quicksand body (web stand-in for the deck's
+  Linotte), Chewy badges, sky-blue palette, white cloud cards with puffy bumps,
+  pink page-number chips, and the title-slide hero (world map + white cloud title
+  bar). All v2 interactions kept. The v2 design is preserved in `backup-site-v2/`
+  (local only, per the backup-first convention).
 
 ---
 

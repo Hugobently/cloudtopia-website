@@ -4,8 +4,8 @@
   "description": "Cloudlings — an eco-adventure app for children 2–6, set in the world of Cloudtopia. Play, imagine, and care for the world.",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#5BB4E5",
-  "theme_color": "#5BB4E5",
+  "background_color": "#5FC5F1",
+  "theme_color": "#5FC5F1",
   "icons": [
     { "src": "assets/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
     { "src": "assets/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" },

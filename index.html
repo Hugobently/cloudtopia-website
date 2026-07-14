@@ -60,7 +60,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Quicksand:wght@400;500;600;700&family=Chewy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@800&family=Quicksand:wght@500;600;700&family=Chewy&display=swap" rel="stylesheet">
+<!-- the hero's LCP background image — preloaded so it doesn't wait for CSS parsing -->
+<link rel="preload" as="image" href="assets/img/map_full.webp" fetchpriority="high">
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/main.js" defer></script>
 </head>
@@ -191,9 +194,6 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero" aria-label="Cloudlings introduction">
   <div class="hero__clouds" aria-hidden="true">
-    <div class="hero__sun floaty floaty--slower" data-depth="0.04">
-      <span class="hero__rays"></span>
-    </div>
     <div class="hero__cloud c1 floaty" data-depth="0.10"></div>
     <div class="hero__cloud c2 floaty floaty--slow" data-depth="0.16"></div>
     <div class="hero__cloud c3 floaty floaty--slower" data-depth="0.07"></div>
@@ -735,7 +735,7 @@
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
   <button class="lightbox__close" id="lbClose" aria-label="Close"><svg class="ic"><use href="#ic-close"/></svg></button>
   <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous image"><svg class="ic"><use href="#ic-chev-left"/></svg></button>
-  <div class="lightbox__stage" id="lbStage"><img id="lbImg" src="" alt=""></div>
+  <div class="lightbox__stage" id="lbStage"><img id="lbImg" alt=""></div>
   <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next image"><svg class="ic"><use href="#ic-chev-right"/></svg></button>
   <div class="lightbox__cap" id="lbCap"></div>
 </div>

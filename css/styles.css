@@ -17,13 +17,13 @@
   --sky-light: #A9E3FB;      /* upper sky */
   --sky-deep: #3FA9E8;       /* lower sky */
   --navy: #275C86;           /* headline navy (deck sub-headlines) */
-  --ink: #37648F;            /* body text */
+  --ink: #37648F;            /* body text on white cards */
+  --ink-sky: #1F4A70;        /* body text directly on the sky (AA contrast) */
   --ink-soft: #4A759D;
   --white: #ffffff;
-  --pink: #F27CB0;           /* page chips / badges */
+  --pink: #F27CB0;           /* page chips / badges (decorative) */
   --pink-soft: #F9B2D1;
-  --pink-cloud: #F6BFD6;     /* pink cloud sections (Episodes page) */
-  --teal: #4FD5DA;
+  --pink-cta: #C93E7C;       /* interactive pink — AA contrast w/ white text */
   --yellow: #FFD45E;
   --orange: #F5A23C;         /* sundrops */
   --logo-blue: #4FB8EE;
@@ -41,7 +41,6 @@
   /* shape + shadow */
   --r-lg: 28px;
   --r-md: 20px;
-  --r-sm: 14px;
   --shadow-card: 0 10px 26px rgba(31, 90, 136, 0.16), 0 3px 8px rgba(31, 90, 136, 0.08);
   --shadow-pop: 0 16px 40px rgba(31, 90, 136, 0.22);
 
@@ -171,10 +170,10 @@ h4 { font-size: 1.12rem; color: var(--navy); letter-spacing: 0.02em; }
 .nav__links a:hover { background: rgba(95, 197, 241, 0.22); transform: translateY(-1px); }
 .nav__links a.is-active { background: rgba(95, 197, 241, 0.3); }
 .nav__links a.is-cta {
-  background: var(--pink); color: var(--white);
-  box-shadow: 0 4px 12px rgba(242, 124, 176, 0.5);
+  background: var(--pink-cta); color: var(--white);
+  box-shadow: 0 4px 12px rgba(201, 62, 124, 0.45);
 }
-.nav__links a.is-cta:hover { background: #EE64A2; }
+.nav__links a.is-cta:hover { background: #BE3573; }
 
 .sun-score[hidden] { display: none; }
 .sun-score {
@@ -238,21 +237,6 @@ h4 { font-size: 1.12rem; color: var(--navy); letter-spacing: 0.02em; }
 }
 
 .hero__clouds { position: absolute; inset: 0; pointer-events: none; }
-/* the map illustration has its own sun — keep this one hidden */
-.hero__sun { display: none; }
-.hero__sun {
-  position: absolute; top: 9%; right: 10%;
-  width: 92px; height: 92px; border-radius: 50%;
-  background: radial-gradient(circle, #FFEFAF 0 38%, var(--yellow) 62%, rgba(255, 212, 94, 0) 75%);
-  filter: drop-shadow(0 0 34px rgba(255, 226, 122, 0.9));
-}
-.hero__rays {
-  position: absolute; inset: -26px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 226, 122, 0.55), rgba(255, 226, 122, 0) 70%);
-  animation: pulse 5s ease-in-out infinite;
-}
-@keyframes pulse { 0%,100% { transform: scale(1); opacity: .8; } 50% { transform: scale(1.16); opacity: 1; } }
-
 .hero__cloud {
   position: absolute; background: rgba(255, 255, 255, 0.9); border-radius: 90px;
   box-shadow: 0 10px 30px rgba(31, 90, 136, 0.10);
@@ -414,11 +398,11 @@ main { counter-reset: page; position: relative; z-index: 1; }
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--navy);
+  color: var(--ink-sky);
   margin-bottom: 10px;
 }
 .section__head h2 { margin-bottom: 14px; }
-.lede { font-size: 1.08rem; color: var(--ink); max-width: 62ch; }
+.lede { font-size: 1.08rem; color: var(--ink-sky); max-width: 62ch; }
 .lede strong, .lede b { color: var(--navy); }
 
 /* ============================================================
@@ -608,7 +592,7 @@ main { counter-reset: page; position: relative; z-index: 1; }
 .gallery__item:hover { transform: translateY(-5px) scale(1.02); box-shadow: var(--shadow-pop); z-index: 2; }
 
 .game-names { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.game-names__label { font-family: var(--f-head); font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: .08em; font-size: 0.85rem; margin-right: 4px; }
+.game-names__label { font-family: var(--f-head); font-weight: 800; color: var(--ink-sky); text-transform: uppercase; letter-spacing: .08em; font-size: 0.85rem; margin-right: 4px; }
 .chip {
   background: var(--white); color: var(--navy);
   border-radius: 999px; padding: 7px 16px;
@@ -722,19 +706,22 @@ main { counter-reset: page; position: relative; z-index: 1; }
   font-size: 0.85rem; font-weight: 600; color: var(--navy);
   margin-bottom: 14px;
 }
+/* tail: solid = bubble tint composited on the white card, painted over the
+   bubble's bottom edge so the seam disappears (negative z would hide it
+   behind the card background) */
 .friend__quote::after {
-  content: ""; position: absolute; left: 50%; bottom: -7px; margin-left: -7px;
+  content: ""; position: absolute; left: 50%; bottom: -6px; margin-left: -7px;
   width: 14px; height: 14px; border-radius: 3px;
-  background: rgba(233, 244, 251, 1);
+  background: #E9F4FB;
   transform: rotate(45deg);
-  z-index: -1;
 }
 .friend__art { position: relative; height: 150px; display: grid; place-items: center; margin-bottom: 12px; }
 .friend__art img { max-height: 150px; width: auto; }
 .friend h4 { margin-bottom: 0; text-transform: uppercase; letter-spacing: .06em; }
 .friend span { font-size: 0.82rem; color: var(--ink-soft); font-weight: 600; }
 .friend--foe .friend__quote { background: rgba(242, 124, 176, 0.16); }
-.friend--foe h4 { color: var(--pink); }
+.friend--foe .friend__quote::after { background: #FDEAF2; }
+.friend--foe h4 { color: var(--pink-cta); }
 /* pooloo swap on hover */
 .swap { grid-area: 1 / 1; transition: opacity .3s ease; }
 .swap--alt { opacity: 0; position: absolute; max-height: 100%; }
@@ -795,7 +782,7 @@ main { counter-reset: page; position: relative; z-index: 1; }
 }
 .road-step h4 { text-transform: uppercase; letter-spacing: .05em; font-size: 1.02rem; }
 .road-step p { margin: 0; font-size: 0.9rem; }
-.road-note { margin-top: 26px; font-size: 0.88rem; color: var(--ink-soft); font-style: italic; }
+.road-note { margin-top: 26px; font-size: 0.88rem; color: var(--ink-sky); font-style: italic; }
 
 /* ============================================================
    COMPANY — meet-the-makers panel (deck page 12)

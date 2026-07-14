@@ -5,24 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page not found — Cloudlings</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#5FC5F1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@800&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-         font-family: "Fredoka", sans-serif; background: linear-gradient(180deg, #BDE3F8 0%, #EAf6FD 100%); color: #2B4A63; text-align: center; }
-  .box { padding: 2rem; }
-  h1 { font-size: 3rem; margin: 0 0 .5rem; }
-  p { font-size: 1.15rem; margin: 0 0 1.5rem; }
-  a { display: inline-block; background: #5BB4E5; color: #fff; text-decoration: none;
-      padding: .8rem 1.6rem; border-radius: 999px; font-weight: 600; }
-  a:hover { background: #4AA3D4; }
+  /* absolute asset paths: this page is served for any missing URL depth */
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Quicksand", sans-serif; font-weight: 500;
+    background: linear-gradient(180deg, #A9E3FB 0%, #5FC5F1 60%, #6FCFF4 100%);
+    color: #37648F; text-align: center;
+  }
+  .box {
+    position: relative;
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 16px 40px rgba(31, 90, 136, 0.22);
+    padding: 2.5rem 2.5rem 2.2rem;
+    margin: 1rem;
+    max-width: 460px;
+  }
+  /* cloud puffs on the card, like the deck */
+  .box::before {
+    content: ""; position: absolute; top: -16px; left: 34px;
+    width: 52px; height: 34px;
+    background:
+      radial-gradient(circle at 14px 20px, #fff 0 14px, transparent 14px),
+      radial-gradient(circle at 38px 18px, #fff 0 10px, transparent 10px);
+  }
+  img { max-width: 220px; height: auto; }
+  h1 {
+    font-family: "Sniglet", cursive; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    font-size: 1.7rem; color: #275C86; margin: 1rem 0 0.4rem;
+  }
+  p { font-size: 1.05rem; margin: 0 0 1.5rem; }
+  a {
+    display: inline-block;
+    font-family: "Sniglet", cursive; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    background: #C93E7C; color: #fff; text-decoration: none;
+    padding: 0.85rem 1.8rem; border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(201, 62, 124, 0.4);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  a:hover { background: #BE3573; transform: translateY(-2px); }
 </style>
 </head>
 <body>
   <div class="box">
-    <img src="assets/img/logo_cloudlings.webp" alt="Cloudlings" width="220">
+    <img src="/assets/img/logo_cloudlings.webp" alt="Cloudlings" width="220" height="63">
     <h1>Oops — lost in the clouds!</h1>
     <p>This page floated away. Let's get you back home.</p>
     <a href="/">Back to Cloudtopia</a>

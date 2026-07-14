@@ -1011,6 +1011,82 @@ main { counter-reset: page; position: relative; z-index: 1; }
 }
 
 /* ============================================================
+   SUBPAGES (partners, privacy policy)
+   ============================================================ */
+.subpage { position: relative; z-index: 1; padding: 150px 0 100px; }
+.page-head { max-width: 820px; margin-bottom: 44px; }
+.page-head h1 {
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  text-shadow: var(--head-shadow);
+  margin-bottom: 14px;
+}
+.subpage .section-gap { margin-top: 70px; }
+.subpage h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
+
+/* long-form text card (privacy policy) */
+.prose {
+  position: relative;
+  background: var(--card);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  padding: 42px 46px;
+  max-width: 860px;
+}
+.prose::before {
+  content: ""; position: absolute; top: -14px; left: 30px;
+  width: 44px; height: 30px;
+  background:
+    radial-gradient(circle at 12px 18px, var(--card) 0 12px, transparent 12px),
+    radial-gradient(circle at 32px 16px, var(--card) 0 9px, transparent 9px);
+  pointer-events: none;
+}
+.prose h2 {
+  font-size: 1.2rem; color: var(--navy);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  text-shadow: none;
+  margin: 1.8em 0 0.5em;
+}
+.prose h2:first-of-type { margin-top: 0; }
+.prose ul { padding-left: 22px; margin: 0 0 1em; }
+.prose li { margin-bottom: 0.45em; }
+.prose .updated { color: var(--ink-soft); font-size: 0.9rem; }
+.prose a { color: var(--navy); font-weight: 700; }
+
+/* ============================================================
+   FAQ — cloud-card accordion (works without JS via <details>)
+   ============================================================ */
+.faq-list { display: grid; gap: 16px; max-width: 860px; }
+.faq-list details {
+  position: relative;
+  background: var(--card);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.faq-list summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 18px 24px;
+  font-family: var(--f-head); font-weight: 800;
+  color: var(--navy); font-size: 1.05rem; letter-spacing: 0.02em;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+  content: "+"; flex: none;
+  width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(95, 197, 241, 0.18); color: var(--navy);
+  font-size: 1.3rem; line-height: 1;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.faq-list details[open] summary::after { transform: rotate(45deg); background: var(--pink-soft); }
+.faq-list details p { margin: 0; padding: 0 54px 20px 24px; font-size: 0.97rem; }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1020px) {

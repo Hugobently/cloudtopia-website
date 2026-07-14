@@ -270,13 +270,13 @@ h4 { font-size: 1.12rem; color: var(--navy); letter-spacing: 0.02em; }
   filter: drop-shadow(0 14px 28px rgba(31, 90, 136, 0.35));
 }
 
-/* white cloud title-bar — “App pitch deck” style, one clean line */
+/* white cloud title-bar — tagline + small kicker, one font family */
 .hero__bar {
   position: relative;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
   background: var(--white);
   border-radius: 22px;
-  padding: 16px 34px;
+  padding: 15px 34px 13px;
   margin: 0 auto 22px;
   width: fit-content;
   max-width: 100%;
@@ -299,12 +299,13 @@ h4 { font-size: 1.12rem; color: var(--navy); letter-spacing: 0.02em; }
   font-size: clamp(1.05rem, 2.4vw, 1.45rem);
   color: var(--navy);
 }
-/* the age line lives in its own white chip next to the CTA pills */
-.hero-chip {
-  background: var(--white); color: var(--navy);
-  font-weight: 700; font-size: 0.95rem;
-  padding: 10px 20px; border-radius: 999px;
-  box-shadow: var(--shadow-card);
+.hero__sub {
+  margin: 0;
+  font-family: var(--f-head); font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
 }
 
 .hero__cta { display: grid; gap: 18px; justify-items: center; }

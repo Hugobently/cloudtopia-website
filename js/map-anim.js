@@ -79,7 +79,7 @@
       a.state.update(delta);
       a.state.apply(a.skeleton);
       a.skeleton.updateWorldTransform();
-      stage.renderer.drawSkeleton(a.skeleton, true);
+      stage.renderer.drawSkeleton(a.skeleton, a.pma);
     }
     stage.renderer.end();
     queueFrame(stage);
@@ -104,16 +104,22 @@
     }
     var assetManager = new spine.webgl.AssetManager(stage.gl);
     assetManager.loadTextureAtlas(BASE + "main_map.atlas");
+    /* the foreground clouds are bone-scaled x8, so the shared atlas is
+       too soft for them — they get their own full-resolution atlas
+       (straight alpha, hence pma false below) */
+    assetManager.loadTextureAtlas(BASE + "fg_clouds_hd.atlas");
     PIECES.forEach(function (p) { assetManager.loadText(BASE + p + ".json"); });
     (function wait() {
       if (assetManager.isLoadingComplete()) {
         if (Object.keys(assetManager.getErrors()).length) return; // leave the still image
         var atlasLoader = new spine.AtlasAttachmentLoader(assetManager.get(BASE + "main_map.atlas"));
+        var hdCloudLoader = new spine.AtlasAttachmentLoader(assetManager.get(BASE + "fg_clouds_hd.atlas"));
         stage.actors = [];
         PIECES.forEach(function (p) {
           var data;
           try {
-            data = new spine.SkeletonJson(atlasLoader).readSkeletonData(assetManager.get(BASE + p + ".json"));
+            var loader = p === "fg_clouds" ? hdCloudLoader : atlasLoader;
+            data = new spine.SkeletonJson(loader).readSkeletonData(assetManager.get(BASE + p + ".json"));
           } catch (e) {
             return; // skip a broken piece, keep the rest
           }
@@ -126,7 +132,7 @@
             // stagger the loops so the whole map doesn't tick in unison
             state.tracks[0].trackTime = Math.random() * data.animations[0].duration;
           }
-          stage.actors.push({ skeleton: skeleton, state: state });
+          stage.actors.push({ skeleton: skeleton, state: state, pma: p !== "fg_clouds" });
         });
         queueFrame(stage);
       } else {

@@ -1,0 +1,606 @@
+
+main_map.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L1_cascade_1
+  rotate: false
+  xy: 1264, 1484
+  size: 38, 125
+  orig: 58, 128
+  offset: 10, 2
+  index: -1
+L1_cascade_2
+  rotate: false
+  xy: 1895, 1460
+  size: 47, 126
+  orig: 58, 128
+  offset: 6, 2
+  index: -1
+L1_cascade_3
+  rotate: false
+  xy: 276, 1422
+  size: 58, 128
+  orig: 58, 128
+  offset: 0, 0
+  index: -1
+L1_cascade_4
+  rotate: false
+  xy: 690, 1505
+  size: 42, 124
+  orig: 58, 128
+  offset: 8, 0
+  index: -1
+L2_cascade_1
+  rotate: false
+  xy: 2, 1430
+  size: 53, 128
+  orig: 55, 128
+  offset: 1, 0
+  index: -1
+L2_cascade_2
+  rotate: false
+  xy: 1944, 1452
+  size: 55, 127
+  orig: 55, 128
+  offset: 0, 0
+  index: -1
+L2_cascade_3
+  rotate: false
+  xy: 1847, 1470
+  size: 46, 126
+  orig: 55, 128
+  offset: 4, 2
+  index: -1
+L2_cascade_4
+  rotate: false
+  xy: 734, 1500
+  size: 55, 125
+  orig: 55, 128
+  offset: 0, 2
+  index: -1
+academy_station
+  rotate: false
+  xy: 1962, 1581
+  size: 51, 93
+  orig: 51, 93
+  offset: 0, 0
+  index: -1
+academy_station_wheel_a
+  rotate: false
+  xy: 90, 1711
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+academy_station_wheel_b
+  rotate: false
+  xy: 71, 1714
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+assets/airship_home
+  rotate: false
+  xy: 2, 1560
+  size: 110, 86
+  orig: 110, 86
+  offset: 0, 0
+  index: -1
+assets/airship_propeller
+  rotate: false
+  xy: 2, 1722
+  size: 9, 9
+  orig: 9, 9
+  offset: 0, 0
+  index: -1
+assets/fg_cloud_1
+  rotate: false
+  xy: 960, 1617
+  size: 307, 69
+  orig: 307, 307
+  offset: 0, 119
+  index: -1
+assets/fg_cloud_2
+  rotate: false
+  xy: 791, 1498
+  size: 307, 117
+  orig: 307, 307
+  offset: 0, 95
+  index: -1
+assets/sonta_clouds_a
+  rotate: false
+  xy: 266, 1641
+  size: 103, 55
+  orig: 103, 55
+  offset: 0, 0
+  index: -1
+assets/sonta_clouds_b
+  rotate: false
+  xy: 2, 1662
+  size: 86, 50
+  orig: 86, 50
+  offset: 0, 0
+  index: -1
+assets/sonta_discs_1
+  rotate: false
+  xy: 387, 1697
+  size: 116, 34
+  orig: 116, 34
+  offset: 0, 0
+  index: -1
+assets/sonta_discs_2
+  rotate: false
+  xy: 1346, 1687
+  size: 140, 44
+  orig: 140, 44
+  offset: 0, 0
+  index: -1
+assets/sonta_discs_3
+  rotate: false
+  xy: 548, 1696
+  size: 171, 35
+  orig: 171, 35
+  offset: 0, 0
+  index: -1
+assets/sonta_discs_4
+  rotate: false
+  xy: 193, 1699
+  size: 157, 32
+  orig: 157, 32
+  offset: 0, 0
+  index: -1
+assets/windmill
+  rotate: false
+  xy: 351, 1542
+  size: 90, 93
+  orig: 95, 94
+  offset: 5, 1
+  index: -1
+assets/windmill_fan
+  rotate: false
+  xy: 1209, 1689
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+carnival
+  rotate: false
+  xy: 114, 1552
+  size: 235, 87
+  orig: 235, 87
+  offset: 0, 0
+  index: -1
+carnival_ferriswheel
+  rotate: false
+  xy: 442, 1388
+  size: 133, 132
+  orig: 133, 132
+  offset: 0, 0
+  index: -1
+dam
+  rotate: false
+  xy: 857, 1618
+  size: 101, 70
+  orig: 101, 70
+  offset: 0, 0
+  index: -1
+farm_barn
+  rotate: false
+  xy: 1100, 1495
+  size: 162, 120
+  orig: 167, 121
+  offset: 5, 1
+  index: -1
+farm_granary
+  rotate: false
+  xy: 1911, 1588
+  size: 49, 91
+  orig: 50, 92
+  offset: 1, 1
+  index: -1
+farm_mill
+  rotate: false
+  xy: 799, 1624
+  size: 56, 68
+  orig: 62, 68
+  offset: 2, 0
+  index: -1
+farm_mill_wheel
+  rotate: false
+  xy: 352, 1698
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+fogfalls
+  rotate: false
+  xy: 215, 1170
+  size: 387, 188
+  orig: 387, 194
+  offset: 0, 6
+  index: -1
+fogfalls_cascade_1
+  rotate: false
+  xy: 577, 1360
+  size: 175, 138
+  orig: 387, 194
+  offset: 135, 3
+  index: -1
+fogfalls_cascade_2
+  rotate: false
+  xy: 925, 1351
+  size: 181, 142
+  orig: 387, 194
+  offset: 127, 0
+  index: -1
+fogfalls_cascade_3
+  rotate: false
+  xy: 754, 1356
+  size: 169, 140
+  orig: 387, 194
+  offset: 130, 1
+  index: -1
+fountain_spray_1
+  rotate: false
+  xy: 28, 1717
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
+  index: -1
+fountain_spray_2
+  rotate: false
+  xy: 13, 1718
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+fountain_spray_3
+  rotate: false
+  xy: 43, 1717
+  size: 12, 14
+  orig: 12, 14
+  offset: 0, 0
+  index: -1
+land_pool_1
+  rotate: false
+  xy: 57, 1429
+  size: 217, 121
+  orig: 217, 121
+  offset: 0, 0
+  index: -1
+land_pool_2
+  rotate: false
+  xy: 1498, 1311
+  size: 272, 164
+  orig: 272, 164
+  offset: 0, 0
+  index: -1
+landmass_b
+  rotate: false
+  xy: 712, 410
+  size: 1244, 436
+  orig: 1875, 1050
+  offset: 454, 269
+  index: -1
+mama_hill_windmill_fan
+  rotate: false
+  xy: 1488, 1686
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+mama_house
+  rotate: false
+  xy: 2, 591
+  size: 708, 530
+  orig: 708, 530
+  offset: 0, 0
+  index: -1
+mt_strata_falls_1
+  rotate: false
+  xy: 1772, 1273
+  size: 104, 195
+  orig: 106, 199
+  offset: 0, 4
+  index: -1
+mt_strata_falls_2
+  rotate: false
+  xy: 1878, 1255
+  size: 101, 195
+  orig: 106, 199
+  offset: 0, 4
+  index: -1
+mt_strata_falls_3
+  rotate: false
+  xy: 2, 1231
+  size: 103, 196
+  orig: 106, 199
+  offset: 1, 3
+  index: -1
+mt_strata_falls_4
+  rotate: false
+  xy: 107, 1230
+  size: 106, 197
+  orig: 106, 199
+  offset: 0, 2
+  index: -1
+orchard_patch
+  rotate: false
+  xy: 1304, 1477
+  size: 541, 119
+  orig: 541, 144
+  offset: 0, 5
+  index: -1
+orchard_rainbow_L
+  rotate: false
+  xy: 1315, 1602
+  size: 200, 82
+  orig: 200, 82
+  offset: 0, 0
+  index: -1
+orchard_rainbow_S
+  rotate: false
+  xy: 371, 1637
+  size: 149, 58
+  orig: 149, 58
+  offset: 0, 0
+  index: -1
+orchard_trees
+  rotate: false
+  xy: 1517, 1598
+  size: 392, 81
+  orig: 541, 144
+  offset: 87, 30
+  index: -1
+rainbow_forest_canopy_1
+  rotate: false
+  xy: 984, 1689
+  size: 101, 42
+  orig: 388, 182
+  offset: 153, 103
+  index: -1
+rainbow_forest_canopy_2
+  rotate: false
+  xy: 1087, 1689
+  size: 120, 42
+  orig: 388, 182
+  offset: 125, 112
+  index: -1
+rainbow_forest_canopy_3
+  rotate: false
+  xy: 806, 1694
+  size: 88, 37
+  orig: 388, 182
+  offset: 109, 145
+  index: -1
+rainbow_forest_canopy_4
+  rotate: false
+  xy: 1535, 1685
+  size: 131, 46
+  orig: 388, 182
+  offset: 85, 134
+  index: -1
+rainbow_forest_slope
+  rotate: false
+  xy: 1108, 1316
+  size: 388, 159
+  orig: 388, 182
+  offset: 0, 0
+  index: -1
+school
+  rotate: false
+  xy: 604, 1123
+  size: 400, 226
+  orig: 400, 226
+  offset: 0, 0
+  index: -1
+school_wheel_L
+  rotate: false
+  xy: 163, 1702
+  size: 28, 29
+  orig: 28, 29
+  offset: 0, 0
+  index: -1
+school_wheel_S
+  rotate: false
+  xy: 112, 1707
+  size: 23, 24
+  orig: 23, 24
+  offset: 0, 0
+  index: -1
+smoke_1
+  rotate: false
+  xy: 721, 1695
+  size: 39, 36
+  orig: 39, 36
+  offset: 0, 0
+  index: -1
+smoke_2
+  rotate: false
+  xy: 762, 1695
+  size: 42, 36
+  orig: 42, 36
+  offset: 0, 0
+  index: -1
+smoke_3
+  rotate: false
+  xy: 505, 1697
+  size: 41, 34
+  orig: 41, 34
+  offset: 0, 0
+  index: -1
+smoke_4
+  rotate: false
+  xy: 896, 1694
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+sonata_bouncy_1
+  rotate: false
+  xy: 1668, 1684
+  size: 146, 47
+  orig: 146, 47
+  offset: 0, 0
+  index: -1
+sonata_bouncy_2
+  rotate: false
+  xy: 1816, 1681
+  size: 167, 50
+  orig: 167, 50
+  offset: 0, 0
+  index: -1
+sonata_dome
+  rotate: false
+  xy: 129, 1645
+  size: 135, 52
+  orig: 135, 52
+  offset: 0, 0
+  index: -1
+sonata_drumhill_1
+  rotate: false
+  xy: 90, 1648
+  size: 37, 57
+  orig: 37, 57
+  offset: 0, 0
+  index: -1
+sonata_drumhill_2
+  rotate: false
+  xy: 1269, 1611
+  size: 44, 75
+  orig: 44, 75
+  offset: 0, 0
+  index: -1
+sonata_drumhill_3
+  rotate: false
+  xy: 1253, 1688
+  size: 46, 43
+  orig: 46, 43
+  offset: 0, 0
+  index: -1
+sonata_drumhill_4
+  rotate: false
+  xy: 937, 1690
+  size: 45, 41
+  orig: 45, 41
+  offset: 0, 0
+  index: -1
+sonata_river
+  rotate: false
+  xy: 2, 2
+  size: 1626, 406
+  orig: 3750, 2100
+  offset: 1443, 875
+  index: -1
+sonata_shrubs
+  rotate: false
+  xy: 522, 1631
+  size: 225, 62
+  orig: 225, 62
+  offset: 0, 0
+  index: -1
+sunlab_glow
+  rotate: false
+  xy: 1006, 1080
+  size: 234, 234
+  orig: 252, 252
+  offset: 9, 9
+  index: -1
+sunnylab
+  rotate: false
+  xy: 336, 1403
+  size: 104, 137
+  orig: 107, 139
+  offset: 3, 2
+  index: -1
+sunnylab_solar_panels
+  rotate: false
+  xy: 443, 1522
+  size: 245, 107
+  orig: 245, 107
+  offset: 0, 0
+  index: -1
+town
+  rotate: false
+  xy: 1242, 848
+  size: 706, 405
+  orig: 709, 406
+  offset: 2, 1
+  index: -1
+town_fountain_statue
+  rotate: false
+  xy: 57, 1714
+  size: 12, 17
+  orig: 12, 17
+  offset: 0, 0
+  index: -1
+town_windy_fan1
+  rotate: false
+  xy: 1301, 1688
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+town_windy_fan2
+  rotate: false
+  xy: 137, 1707
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+watermill
+  rotate: false
+  xy: 749, 1627
+  size: 48, 66
+  orig: 48, 66
+  offset: 0, 0
+  index: -1
+watermill_wheel
+  rotate: false
+  xy: 1985, 1676
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+
+main_map2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+landmass_a
+  rotate: false
+  xy: 2, 2
+  size: 1722, 754
+  orig: 1875, 1050
+  offset: 0, 0
+  index: -1
+mt_strata
+  rotate: false
+  xy: 2, 758
+  size: 1008, 655
+  orig: 1008, 655
+  offset: 0, 0
+  index: -1
+sonata_bridge
+  rotate: false
+  xy: 2, 1415
+  size: 1489, 422
+  orig: 3750, 2100
+  offset: 2261, 903
+  index: -1
+
+main_map3.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+academy
+  rotate: false
+  xy: 2, 2
+  size: 1167, 799
+  orig: 3750, 2100
+  offset: 0, 55
+  index: -1

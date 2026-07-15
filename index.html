@@ -123,6 +123,7 @@
 <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/main.js" defer></script>
+<script src="js/map-anim.js" defer></script>
 </head>
 <body>
 
@@ -521,7 +522,10 @@
     </div>
 
     <button class="map-show reveal" data-full="assets/img/map_full.webp" aria-label="Open the full map of Cloudtopia — zoom and explore">
-      <img src="assets/img/map_inline.webp" alt="The colourful illustrated map of the whole Cloudtopia world" width="1200" height="690" loading="lazy" decoding="async">
+      <span class="map-anim" id="mapAnim">
+        <img src="assets/img/map_anim.webp" alt="The colourful illustrated map of the whole Cloudtopia world" width="2000" height="1120" loading="lazy" decoding="async">
+        <canvas aria-hidden="true"></canvas>
+      </span>
       <span class="map-show__hint"><svg class="ic ic--sm"><use href="#ic-zoom"/></svg> Explore the full map</span>
     </button>
   </div>

@@ -224,9 +224,14 @@ h4 { font-size: 1.12rem; color: var(--navy); letter-spacing: 0.02em; }
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(150, 220, 250, 0.35) 0%, rgba(95, 197, 241, 0) 34%),
-    url("../assets/img/map_full.webp") center 62% / cover no-repeat,
+    url("../assets/img/map_hero.webp") center 62% / cover no-repeat,
     linear-gradient(180deg, var(--sky-light), var(--sky));
   z-index: 1;
+}
+/* game Spine animations drawn over the hero's map background */
+.hero__map {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0;
 }
 /* soft white cloud bank at the bottom edge, like the title slide */
 .hero::after {

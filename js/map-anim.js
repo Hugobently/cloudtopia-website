@@ -13,10 +13,9 @@
   var canvas = wrap.querySelector("canvas");
   if (!canvas || !("IntersectionObserver" in window)) return;
 
-  /* keep the still image for people who prefer less motion,
-     small screens and data-saver connections */
+  /* keep the still image for people who prefer less motion
+     and data-saver connections */
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  if (window.innerWidth < 720) return;
   if (navigator.connection && navigator.connection.saveData) return;
 
   // every skeleton shares one world space: the map spans this box

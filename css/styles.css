@@ -899,6 +899,8 @@ main { counter-reset: page; position: relative; z-index: 1; }
 .sundrop.is-got { opacity: 0; transform: scale(1.7); pointer-events: none; }
 @keyframes bob { 0%,100% { margin-top: 0; } 50% { margin-top: -9px; } }
 .sundrop--hero { right: 12%; top: 38%; }
+.sundrop--hero2 { left: 8%; top: 22%; }
+.sundrop--hero3 { left: 11%; bottom: 18%; }
 .sundrops { position: absolute; inset: 0; pointer-events: none; }
 .sundrops .sundrop { pointer-events: auto; }
 .sd1 { top: 120px; right: 6%; } .sd2 { top: 42%; left: 3.5%; }
@@ -1105,6 +1107,8 @@ main { counter-reset: page; position: relative; z-index: 1; }
 
   .hero { padding-top: 110px; }
   .sundrop--hero { top: 22%; right: 7%; }  /* clear of the title bar on small screens */
+  .sundrop--hero2 { top: 14%; left: 6%; }
+  .sundrop--hero3 { bottom: 12%; left: 8%; }
   .hero__bar { padding: 14px 24px; }
 
   .section { padding: 70px 0 90px; }

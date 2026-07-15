@@ -236,33 +236,6 @@ h4 { font-size: 1.12rem; color: var(--navy); letter-spacing: 0.02em; }
   pointer-events: none;
 }
 
-.hero__clouds { position: absolute; inset: 0; pointer-events: none; }
-.hero__cloud {
-  position: absolute; background: rgba(255, 255, 255, 0.9); border-radius: 90px;
-  box-shadow: 0 10px 30px rgba(31, 90, 136, 0.10);
-}
-.hero__cloud::before, .hero__cloud::after { content: ""; position: absolute; background: inherit; border-radius: 50%; box-shadow: none; }
-.c1 { width: 200px; height: 62px; top: 17%; left: 6%; }
-.c1::before { width: 84px; height: 84px; top: -38px; left: 34px; }
-.c1::after { width: 56px; height: 56px; top: -22px; right: 38px; }
-.c2 { width: 150px; height: 48px; top: 27%; right: 14%; opacity: .9; }
-.c2::before { width: 62px; height: 62px; top: -28px; left: 26px; }
-.c2::after { width: 44px; height: 44px; top: -18px; right: 28px; }
-.c3 { width: 250px; height: 74px; bottom: 24%; left: 10%; opacity: .75; }
-.c3::before { width: 100px; height: 100px; top: -46px; left: 44px; }
-.c3::after { width: 66px; height: 66px; top: -26px; right: 48px; }
-.c4 { width: 130px; height: 42px; bottom: 34%; right: 8%; opacity: .85; }
-.c4::before { width: 54px; height: 54px; top: -24px; left: 22px; }
-.c4::after { width: 38px; height: 38px; top: -16px; right: 24px; }
-
-/* the four heroes peeking from the edges (deck pages 2–3) */
-.hero__cast { position: absolute; inset: 0; pointer-events: none; }
-.cast { position: absolute; width: clamp(110px, 15vw, 210px); filter: drop-shadow(0 12px 24px rgba(31, 90, 136, 0.28)); }
-.cast--castella { left: 2%; top: 24%; }
-.cast--knucki { right: 2.5%; top: 20%; }
-.cast--alto { left: 7%; bottom: 9%; }
-.cast--luci { right: 7%; bottom: 11%; }
-
 .hero__inner { position: relative; text-align: center; z-index: 2; width: min(820px, 92vw); }
 .wordmark { margin: 0 auto 26px; }
 .wordmark img {
@@ -596,7 +569,7 @@ main { counter-reset: page; position: relative; z-index: 1; }
     radial-gradient(circle at 29px 14px, var(--card) 0 8px, transparent 8px);
   pointer-events: none;
 }
-.gallery__item img { border-radius: 13px; width: 100%; }
+.gallery__item img { border-radius: 13px; width: 100%; aspect-ratio: 1400 / 685; object-fit: cover; display: block; }
 .gallery__item:hover { transform: translateY(-5px) scale(1.02); box-shadow: var(--shadow-pop); z-index: 2; }
 
 .game-names { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
@@ -1133,8 +1106,6 @@ main { counter-reset: page; position: relative; z-index: 1; }
   .hero { padding-top: 110px; }
   .sundrop--hero { top: 22%; right: 7%; }  /* clear of the title bar on small screens */
   .hero__bar { padding: 14px 24px; }
-  .cast--castella, .cast--knucki { top: 12%; }
-  .cast { width: clamp(80px, 18vw, 130px); }
 
   .section { padding: 70px 0 90px; }
   .section::after { bottom: 20px; min-width: 50px; font-size: 1rem; }
@@ -1155,7 +1126,6 @@ main { counter-reset: page; position: relative; z-index: 1; }
   .friends { grid-template-columns: 1fr; }
   .roadmap, .snapshot { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: 1fr; }
-  .cast { display: none; }
   .store-badges { flex-direction: column; align-items: stretch; }
   .store-badge { justify-content: center; }
   .section::after { display: none; }

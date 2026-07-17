@@ -18,12 +18,15 @@
   // every skeleton shares one world space: the map spans this box
   var WORLD_W = 12500, WORLD_H = 7000;
 
-  // draw order: back -> front
+  /* draw order: back -> front, copied from the game's HomeScreen.unity
+     sibling order — land_a/land_b are the static landmasses that mask
+     the river and pool edges, they must sit exactly here */
   var PIECES = [
-    "mt_strata", "sonata_river", "fog_falls", "sonata_hills", "sonata_discs",
-    "rainbow_forest", "rainbow_orchard", "school", "academy", "sunnylab",
-    "dam", "watermill", "windmill", "farm", "mama_house", "float_pools",
-    "town", "carnival", "airship", "fg_clouds"
+    "float_pools", "land_b", "sonata_river", "land_a", "academy",
+    "carnival", "farm", "fog_falls", "mama_house", "mt_strata",
+    "school", "rainbow_forest", "rainbow_orchard", "sonata_hills",
+    "sonata_discs", "sunnylab", "town", "watermill", "windmill",
+    "dam", "airship", "fg_clouds"
   ];
 
   var BASE = "assets/spine/";

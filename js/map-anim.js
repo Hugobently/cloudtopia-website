@@ -20,10 +20,12 @@
 
   /* draw order: back -> front, copied from the game's HomeScreen.unity
      sibling order — land_a/land_b are the static landmasses that mask
-     the river and pool edges, they must sit exactly here */
+     the river and pool edges, they must sit exactly here. One deviation:
+     fog_falls goes behind the landmasses so the waterfall emerges from
+     under the cliff and the bridge, like in the flattened map artwork */
   var PIECES = [
-    "float_pools", "land_b", "sonata_river", "land_a", "academy",
-    "carnival", "farm", "fog_falls", "mama_house", "mt_strata",
+    "float_pools", "fog_falls", "land_b", "sonata_river", "land_a",
+    "academy", "carnival", "farm", "mama_house", "mt_strata",
     "school", "rainbow_forest", "rainbow_orchard", "sonata_hills",
     "sonata_discs", "sunnylab", "town", "watermill", "windmill",
     "dam", "airship", "fg_clouds"

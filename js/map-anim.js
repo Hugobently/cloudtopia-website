@@ -102,7 +102,11 @@
     if (stage.started) return;
     stage.started = true;
     try {
-      stage.gl = stage.canvas.getContext("webgl", { alpha: true, premultipliedAlpha: false });
+      /* the renderer writes premultiplied pixels (pma blend modes), so
+         the canvas must composite as premultiplied too — declaring it
+         straight makes the browser multiply by alpha a second time,
+         which darkens every soft edge (cloud scallops, beach, castle) */
+      stage.gl = stage.canvas.getContext("webgl", { alpha: true, premultipliedAlpha: true });
       if (!stage.gl) return;
       stage.renderer = new spine.webgl.SceneRenderer(stage.canvas, stage.gl);
     } catch (e) {
@@ -112,7 +116,7 @@
     assetManager.loadTextureAtlas(BASE + "main_map.atlas");
     /* the foreground clouds are bone-scaled x8, so the shared atlas is
        too soft for them — they get their own full-resolution atlas
-       (straight alpha, hence pma false below) */
+       (premultiplied, like every other page) */
     assetManager.loadTextureAtlas(BASE + "fg_clouds_hd.atlas");
     PIECES.forEach(function (p) { assetManager.loadText(BASE + p + ".json"); });
     (function wait() {
@@ -138,7 +142,7 @@
             // stagger the loops so the whole map doesn't tick in unison
             state.tracks[0].trackTime = Math.random() * data.animations[0].duration;
           }
-          stage.actors.push({ skeleton: skeleton, state: state, pma: p !== "fg_clouds" });
+          stage.actors.push({ skeleton: skeleton, state: state, pma: true });
         });
         queueFrame(stage);
       } else {

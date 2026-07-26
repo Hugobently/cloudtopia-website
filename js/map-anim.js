@@ -166,15 +166,25 @@
     document.head.appendChild(s);
   }
 
-  stages.forEach(function (stage) {
-    stage.visible = false;
-    stage.lastTime = 0;
-    stage.rafQueued = false;
-    new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        stage.visible = entry.isIntersecting;
-        if (stage.visible) { requestStage(stage); queueFrame(stage); }
-      });
-    }, { rootMargin: "600px 0px" }).observe(stage.canvas);
-  });
+  /* the runtime + atlases are ~3 MB; starting them during page load
+     starves the hero image and fonts on slow connections, so the
+     observers only arm once every critical resource has finished */
+  function armStages() {
+    stages.forEach(function (stage) {
+      stage.visible = false;
+      stage.lastTime = 0;
+      stage.rafQueued = false;
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          stage.visible = entry.isIntersecting;
+          if (stage.visible) { requestStage(stage); queueFrame(stage); }
+        });
+      }, { rootMargin: "600px 0px" }).observe(stage.canvas);
+    });
+  }
+  if (document.readyState === "complete") {
+    armStages();
+  } else {
+    window.addEventListener("load", armStages, { once: true });
+  }
 })();

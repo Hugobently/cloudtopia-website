@@ -115,11 +115,14 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@800&family=Quicksand:wght@500;600;700&family=Chewy&display=swap" rel="stylesheet">
-<!-- the hero's LCP background image — preloaded so it doesn't wait for CSS parsing -->
-<link rel="preload" as="image" href="assets/img/map_hero.webp" fetchpriority="high">
+<link rel="preload" as="font" href="assets/fonts/sniglet-800-latin.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="assets/fonts/quicksand-500-latin.woff2" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<!-- the hero's LCP background image — preloaded so it doesn't wait for CSS parsing;
+     one preload per viewport bracket, matching the .hero media queries -->
+<link rel="preload" as="image" href="assets/img/map_hero_1280.webp" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/map_hero_2048.webp" media="(min-width: 769px) and (max-width: 1440px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/map_hero.webp" media="(min-width: 1441px)" fetchpriority="high">
 <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/main.js" defer></script>

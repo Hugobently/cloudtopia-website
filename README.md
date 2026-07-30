@@ -77,6 +77,41 @@ Originals are never modified — rerun any time.
 
 ---
 
+## SEO & search engines
+
+Live at **https://cloudtopiaentertainment.com** (GitHub Pages, `CNAME` in repo root;
+`www.` 301-redirects to the apex domain).
+
+- **`sitemap.xml`** — lists all 3 pages (`/`, `/partners/`, `/privacy-policy/`).
+  Update `<lastmod>` when a page changes. Referenced from **`robots.txt`**.
+- **Google Search Console** — property `https://cloudtopiaentertainment.com/`
+  (URL-prefix), verified 2026-07-30 automatically via the domain provider on the
+  company Google account. Sitemap registered; both content pages indexed.
+  Search performance (impressions/clicks) lives here.
+- **Bing Webmaster Tools** — site added and verified on the same account;
+  sitemap submitted 2026-07-26 (status Success, 3 URLs).
+- **IndexNow** — the key file `15723659dd7848e7c5647f38e07bbdc1.txt` in the repo
+  root must stay deployed. After publishing content changes, ping Bing & friends:
+
+  ```
+  curl -X POST "https://api.indexnow.org/indexnow" \
+    -H "Content-Type: application/json; charset=utf-8" \
+    -d '{"host":"cloudtopiaentertainment.com",
+         "key":"15723659dd7848e7c5647f38e07bbdc1",
+         "keyLocation":"https://cloudtopiaentertainment.com/15723659dd7848e7c5647f38e07bbdc1.txt",
+         "urlList":["https://cloudtopiaentertainment.com/"]}'
+  ```
+
+- **No analytics by design** — the privacy policy promises "no analytics or
+  tracking", so the site must stay script-free of trackers. Visitor-adjacent
+  numbers come from Search Console / Bing Webmaster search-performance reports
+  only. Adding real analytics requires updating `privacy-policy/index.html` first.
+- On-page SEO (titles, descriptions, canonicals, Open Graph/Twitter cards,
+  schema.org structured data) is maintained directly in each page's `<head>`;
+  `404.html` is deliberately `noindex`.
+
+---
+
 ## Notes / status
 
 - The app is presented as **“Coming soon.”** App Store / Google Play badges are
